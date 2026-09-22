@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snipzo — Profile / Settings</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="lab-header">
+  <div class="lab-title">
+    <h1>Snipzo</h1>
+    <span>Profile / Settings — नीचे बटन से दूसरे पेज पर जाएँ</span>
+  </div>
+  <div class="lab-nav">
+    <button onclick="go('splash')">Splash Screen</button>
+    <button onclick="go('login')">Login</button>
+    <button onclick="go('home')">Home</button>
+    <button onclick="go('editor')">Video Editor</button>
+    <button onclick="go('tools')">Tools</button>
+    <button onclick="go('templates')">Templates</button>
+    <button onclick="go('export')">Export</button>
+    <button onclick="go('projects')">Projects</button>
+    <button class="active" onclick="go('profile')">Profile / Settings</button>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="phone">
+    <section class="screen active" id="screen-profile">
+      <div class="statusbar"><span>9:41</span><div class="icons">📶 📡 🔋</div></div>
+      <div class="screen-body">
+        <div class="subpage-head"><h2>Profile</h2></div>
+
+        <div class="profile-hero">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=200" alt="profile photo">
+            <div class="avatar-edit-btn" onclick="alert('फोटो चुनने के लिए गैलरी/कैमरा खुलेगा')">📷</div>
+          </div>
+          <h3 id="profileNameDisplay">Riya Sharma</h3>
+          <span>riya.sharma@email.com</span>
+        </div>
+
+        <div class="settings-group">
+          <div class="settings-group-label">Account</div>
+          <div class="settings-card">
+            <div class="settings-row" onclick="alert('गैलरी या कैमरा से नई प्रोफाइल फोटो चुनें')">
+              <div class="ic g-purple">🖼️</div>
+              <div class="txt"><h5>Set Profile Photo</h5><span>Choose from gallery or camera</span></div>
+              <span class="chev">›</span>
+            </div>
+            <div class="settings-row" onclick="editName()">
+              <div class="ic g-cyan">✏️</div>
+              <div class="txt"><h5>Edit Profile Name</h5><span id="profileNameSub">Riya Sharma</span></div>
+              <span class="chev">›</span>
+            </div>
+            <div class="settings-row">
+              <div class="ic g-pink">📧</div>
+              <div class="txt"><h5>Email</h5><span>riya.sharma@email.com</span></div>
+              <span class="chev">›</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <div class="settings-group-label">Preferences</div>
+          <div class="settings-card">
+            <div class="settings-row" onclick="toggleLangPicker()">
+              <div class="ic g-blue">🌐</div>
+              <div class="txt"><h5>App Language</h5><span id="langSub">हिन्दी (Hindi)</span></div>
+              <span class="lang-value" id="langChevValue">Change ›</span>
+            </div>
+            <div class="settings-row">
+              <div class="ic g-yellow">🔔</div>
+              <div class="txt"><h5>Notifications</h5><span>Push alerts &amp; reminders</span></div>
+              <div class="switch"></div>
+            </div>
+            <div class="settings-row">
+              <div class="ic g-green">💾</div>
+              <div class="txt"><h5>Save to Gallery</h5><span>Auto-save exported videos</span></div>
+              <div class="switch"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="langPicker" class="settings-group" style="display:none;">
+          <div class="settings-group-label">Select Language</div>
+          <div class="settings-card">
+            <div class="settings-row" onclick="setLang('हिन्दी (Hindi)')"><div class="ic g-blue">🇮🇳</div><div class="txt"><h5>हिन्दी</h5></div></div>
+            <div class="settings-row" onclick="setLang('English')"><div class="ic g-blue">🇬🇧</div><div class="txt"><h5>English</h5></div></div>
+            <div class="settings-row" onclick="setLang('मराठी (Marathi)')"><div class="ic g-blue">🕉️</div><div class="txt"><h5>मराठी</h5></div></div>
+            <div class="settings-row" onclick="setLang('বাংলা (Bengali)')"><div class="ic g-blue">🇧🇩</div><div class="txt"><h5>বাংলা</h5></div></div>
+            <div class="settings-row" onclick="setLang('தமிழ் (Tamil)')"><div class="ic g-blue">🛕</div><div class="txt"><h5>தமிழ்</h5></div></div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <div class="settings-group-label">Other</div>
+          <div class="settings-card">
+            <div class="settings-row"><div class="ic g-purple">💎</div><div class="txt"><h5>Manage Subscription</h5><span>Pro plan · renews monthly</span></div><span class="chev">›</span></div>
+            <div class="settings-row"><div class="ic g-cyan">🔒</div><div class="txt"><h5>Privacy &amp; Security</h5></div><span class="chev">›</span></div>
+            <div class="settings-row" onclick="go('login')"><div class="ic g-pink">🚪</div><div class="txt"><h5>Log Out</h5></div><span class="chev">›</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-tabs">
+        <div class="tab" onclick="go('home')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Home</div>
+        <div class="tab" onclick="go('projects')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Projects</div>
+        <div class="tab" onclick="go('templates')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Templates</div>
+        <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>Profile</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+                                                                                                                                                                        </html>
