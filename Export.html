@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snipzo — Export</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="lab-header">
+  <div class="lab-title">
+    <h1>Snipzo</h1>
+    <span>Export — नीचे बटन से दूसरे पेज पर जाएँ</span>
+  </div>
+  <div class="lab-nav">
+    <button onclick="go('splash')">Splash Screen</button>
+    <button onclick="go('login')">Login</button>
+    <button onclick="go('home')">Home</button>
+    <button onclick="go('editor')">Video Editor</button>
+    <button onclick="go('tools')">Tools</button>
+    <button onclick="go('templates')">Templates</button>
+    <button class="active" onclick="go('export')">Export</button>
+    <button onclick="go('projects')">Projects</button>
+    <button onclick="go('profile')">Profile / Settings</button>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="phone">
+    <section class="screen active" id="screen-export">
+      <div class="statusbar"><span>9:41</span><div class="icons">📶 📡 🔋</div></div>
+      <div class="screen-body">
+        <div class="subpage-head"><span class="back-arrow" onclick="go('editor')">←</span><h2>Export</h2></div>
+        <div class="preview-frame" style="margin-bottom:6px;">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500" alt="preview">
+          <div class="preview-caption">Good Vibes</div>
+        </div>
+
+        <div class="opt-label">Resolution</div>
+        <div class="opt-row">
+          <div class="opt-chip">480P</div>
+          <div class="opt-chip">720P</div>
+          <div class="opt-chip active">1080P</div>
+          <div class="opt-chip">4K</div>
+        </div>
+
+        <div class="opt-label">Frame Rate</div>
+        <div class="opt-row">
+          <div class="opt-chip">24</div>
+          <div class="opt-chip active">30</div>
+          <div class="opt-chip">60</div>
+        </div>
+
+        <div class="opt-label">Format</div>
+        <div class="opt-row">
+          <div class="opt-chip active">MP4</div>
+          <div class="opt-chip">MOV</div>
+          <div class="opt-chip">GIF</div>
+        </div>
+
+        <div class="toggle-row">Save to Gallery <div class="switch"></div></div>
+
+        <div class="export-cta">⇱ Export</div>
+        <div class="export-note">Estimated size: 78.4 MB · Duration: 00:45</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
