@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snipzo — Splash Screen</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="lab-header">
+  <div class="lab-title">
+    <h1>Snipzo</h1>
+    <span>Splash Screen — नीचे बटन से दूसरे पेज पर जाएँ</span>
+  </div>
+  <div class="lab-nav">
+    <button class="active" onclick="go('splash')">Splash Screen</button>
+    <button onclick="go('login')">Login</button>
+    <button onclick="go('home')">Home</button>
+    <button onclick="go('editor')">Video Editor</button>
+    <button onclick="go('tools')">Tools</button>
+    <button onclick="go('templates')">Templates</button>
+    <button onclick="go('export')">Export</button>
+    <button onclick="go('projects')">Projects</button>
+    <button onclick="go('profile')">Profile / Settings</button>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="phone">
+    <section class="screen active" id="screen-splash">
+      <div class="statusbar"><span>9:41</span><div class="icons">📶 📡 🔋</div></div>
+      <div class="screen-body">
+        <div class="brandmark">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5l11 7-11 7V5z" fill="#fff"/></svg>
+        </div>
+        <div class="brand-word">Snip<span class="x-letter">zo</span></div>
+        <div class="brand-tag"><span>Create</span><i></i><span>Edit</span><i></i><span>Inspire</span></div>
+        <div class="splash-wave"></div>
+        <div class="splash-footer">Your Creativity, Our Power<div class="bar"></div></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
