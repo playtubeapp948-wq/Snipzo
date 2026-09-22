@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snipzo — Video Editor</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="lab-header">
+  <div class="lab-title">
+    <h1>Snipzo</h1>
+    <span>Video Editor — नीचे बटन से दूसरे पेज पर जाएँ</span>
+  </div>
+  <div class="lab-nav">
+    <button onclick="go('splash')">Splash Screen</button>
+    <button onclick="go('login')">Login</button>
+    <button onclick="go('home')">Home</button>
+    <button class="active" onclick="go('editor')">Video Editor</button>
+    <button onclick="go('tools')">Tools</button>
+    <button onclick="go('templates')">Templates</button>
+    <button onclick="go('export')">Export</button>
+    <button onclick="go('projects')">Projects</button>
+    <button onclick="go('profile')">Profile / Settings</button>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="phone">
+    <section class="screen active" id="screen-editor">
+      <div class="statusbar"><span>9:41</span><div class="icons">📶 📡 🔋</div></div>
+      <div class="screen-body">
+        <div class="editor-topbar">
+          <span class="close-x" onclick="go('home')">✕</span>
+          <div class="res-pill">1080P ▾</div>
+          <div class="export-btn" onclick="go('export')">Export</div>
+        </div>
+        <div class="preview-frame">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500" alt="preview">
+          <div class="preview-caption">Good Vibes</div>
+        </div>
+        <div class="transport-row">
+          <span>00:08 / 00:45</span>
+          <div class="transport-icons"><span>▶️</span><span>↺</span><span>↻</span><span>⤢</span></div>
+        </div>
+        <div class="timeline-track">
+          <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=100')"></div>
+          <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?w=100')"></div>
+          <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=100')"></div>
+          <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=100')"></div>
+        </div>
+        <div class="track-strip track-text">T &nbsp;Good Vibes</div>
+        <div class="track-strip track-audio">♪ &nbsp;Background Music</div>
+      </div>
+      <div class="toolbelt">
+        <div class="tool active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M18 3v18M3 6h18M3 18h18"/></svg>Edit</div>
+        <div class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Audio</div>
+        <div class="tool" onclick="go('tools')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>Text</div>
+        <div class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg>Effects</div>
+        <div class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18"/></svg>Filters</div>
+        <div class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7M4 10V3M12 21v-11M12 6V3M20 21v-5M20 12V3M1 14h6M9 6h6M17 16h6"/></svg>Adjust</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
