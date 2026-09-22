@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snipzo — Home</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="lab-header">
+  <div class="lab-title">
+    <h1>Snipzo</h1>
+    <span>Home — नीचे बटन से दूसरे पेज पर जाएँ</span>
+  </div>
+  <div class="lab-nav">
+    <button onclick="go('splash')">Splash Screen</button>
+    <button onclick="go('login')">Login</button>
+    <button class="active" onclick="go('home')">Home</button>
+    <button onclick="go('editor')">Video Editor</button>
+    <button onclick="go('tools')">Tools</button>
+    <button onclick="go('templates')">Templates</button>
+    <button onclick="go('export')">Export</button>
+    <button onclick="go('projects')">Projects</button>
+    <button onclick="go('profile')">Profile / Settings</button>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="phone">
+    <section class="screen active" id="screen-home">
+      <div class="statusbar"><span>9:41</span><div class="icons">📶 📡 🔋</div></div>
+      <div class="screen-body">
+        <div class="home-topbar">
+          <div class="home-logo"><span class="mini-mark"></span>Snipzo</div>
+          <div class="home-icons">
+            <div class="pro-pill">👑 Pro</div>
+            <div class="avatar-dot"></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div>
+            <h2>Edit Like a Pro</h2>
+            <p>Turn your ideas into amazing videos</p>
+            <div class="hero-btn" onclick="go('editor')">＋ New Project</div>
+          </div>
+          <div class="hero-play">▶️</div>
+        </div>
+
+        <div class="quicktool-grid">
+          <div class="quicktool" onclick="go('tools')"><div class="ic g-blue">⚡</div><span>Auto Edit</span></div>
+          <div class="quicktool" onclick="go('templates')"><div class="ic g-pink">▦</div><span>Templates</span></div>
+          <div class="quicktool" onclick="go('tools')"><div class="ic g-purple">🧠</div><span>AI Tools</span></div>
+          <div class="quicktool"><div class="ic g-yellow">📷</div><span>Camera</span></div>
+        </div>
+
+        <div class="section-row"><h3>Quick Tools</h3></div>
+        <div class="qgrid">
+          <div class="qgrid-tool" onclick="go('tools')"><div class="ic g-cyan">✂️</div><span>Trim &amp; Split</span></div>
+          <div class="qgrid-tool" onclick="go('tools')"><div class="ic g-purple">T</div><span>Text &amp; Captions</span></div>
+          <div class="qgrid-tool" onclick="go('tools')"><div class="ic g-pink">✨</div><span>Effects</span></div>
+          <div class="qgrid-tool" onclick="go('tools')"><div class="ic g-blue">🎛️</div><span>Filters</span></div>
+          <div class="qgrid-tool" onclick="go('tools')"><div class="ic g-green">⇄</div><span>Transitions</span></div>
+          <div class="qgrid-tool" onclick="go('tools')"><div class="ic g-yellow">🎵</div><span>Music</span></div>
+        </div>
+
+        <div class="section-row"><h3>Recent Projects</h3><a onclick="go('projects')">See All</a></div>
+        <div class="project-row">
+          <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?w=100')"></div>
+          <div class="project-meta"><h4>My Video 01</h4><span>00:45 · 2 days ago</span></div>
+          <div class="project-dots">⋮</div>
+        </div>
+        <div class="project-row">
+          <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=100')"></div>
+          <div class="project-meta"><h4>Travel Vlog</h4><span>01:23 · 4 days ago</span></div>
+          <div class="project-dots">⋮</div>
+        </div>
+      </div>
+      <div class="bottom-tabs">
+        <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>Home</div>
+        <div class="tab" onclick="go('projects')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Projects</div>
+        <div class="tab" onclick="go('templates')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Templates</div>
+        <div class="tab" onclick="go('profile')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>Profile</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
